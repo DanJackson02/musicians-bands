@@ -14,11 +14,15 @@ describe('Band and Musician Models', () => {
 
     test('can create a Band', async () => {
         // TODO - test creating a band
-        expect('NO TEST').toBe('EXPECTED VALUE HERE');
+        const testBand = await Band.create({ name: 'bandName', genre: 'bandGenre' })
+        expect(testBand.name).toBe('bandName');
+        expect(testBand.genre).toBe('bandGenre');
     })
 
     test('can create a Musician', async () => {
         // TODO - test creating a musician
-        expect('NO TEST').toBe('EXPECTED VALUE HERE');
+        const testMusician = await Musician.create ({ name: 'Ash', instrument: 'Guitar'})
+        expect(testMusician.name).toBe('Ash');
+        expect(testMusician.instrument).toBe('Guitar');
     })
 })
